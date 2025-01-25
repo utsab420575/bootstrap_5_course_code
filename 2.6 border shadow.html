@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Bootstrap Sandbox | Sizing, Borders & Shadows</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-5">Sizing, Borders & Shadows</h1>
+
+    <!-- Width -->
+    <div class="bg-success text-white p-3 w-25">Width 25%</div>
+    <div class="bg-success text-white p-3 w-50">Width 50%</div>
+    <div class="bg-success text-white p-3 w-75">Width 75%</div>
+    <div class="bg-success text-white p-3 w-100">Width 100%</div>
+    <div class="bg-success text-white p-3 w-auto">Width Auto</div>
+
+    <br /><br />
+
+    <!-- Height -->
+    <div style="height: 300px; border: 1px solid #333">
+        <div class="bg-secondary text-white d-inline-block  h-25">Height 25%</div>
+        <div class="bg-secondary text-white d-inline-block h-50">Height 50%</div>
+        <div class="bg-secondary text-white d-inline-block h-75">Height 75%</div>
+        <div class="bg-secondary text-white d-inline-block h-100">Height 100%</div>
+        <div class="bg-secondary text-white d-inline-block h-auto">Height Auto</div>
+    </div>
+
+    <br /><br />
+
+
+
+    <h1>Border Color: Use border-{color} to change border colors</h1>
+    <!-- Border Colors -->
+    <div class="p-3 mb-2 bg-light border border-primary">Primary</div>
+    <div class="p-3 mb-2 bg-light border border-primary-subtle">Primary Subtle</div>
+    <div class="p-3 mb-2 bg-light border border-secondary">Secondary</div>
+    <div class="p-3 mb-2 bg-light border border-secondary-subtle">Secondary Subtle</div>
+    <div class="p-3 mb-2 bg-light border border border-success">Success</div>
+    <div class="p-3 mb-2 bg-light border border border-success-subtle">Success Subtle</div>
+    <div class="p-3 mb-2 bg-light border border-info">Info</div>
+    <div class="p-3 mb-2 bg-light border border-info-subtle">Info Subtle</div>
+    <div class="p-3 mb-2 bg-light border border-warning">Warning</div>
+    <div class="p-3 mb-2 bg-light border border-warning-subtle">Warning Subtle</div>
+    <div class="p-3 mb-2 bg-light border border-danger">Danger</div>
+    <div class="p-3 mb-2 bg-light border border-danger-subtle">Danger Subtle</div>
+    <div class="p-3 mb-2 bg-light border border-light">Light</div>
+    <div class="p-3 mb-2 bg-light border border-light-subtle">Light Subtle</div>
+    <div class="p-3 mb-2 bg-light border border-dark">Dark</div>
+    <div class="p-3 mb-2 bg-light border border-black">Black</div>
+    <div class="p-3 mb-2 bg-light border border-white">White</div>
+
+    <br /><br />
+
+    <h1 class="mt-5">Border Sizes: Adjust the border thickness using border-{size}</h1>
+    <!--    Border Sizes: Adjust the border thickness using border-{size}-->
+    <div class="border border-1">Border size 1</div>
+    <div class="border border-2">Border size 2</div>
+    <div class="border border-3">Border size 3</div>
+    <div class="border border-5">Border size 5</div>
+
+    <br /><br />
+
+    <h1>Border Sides: Apply borders to specific sides</h1>
+    <!-- Borders -->
+    <div class="p-3 mb-2 bg-light border">Regular</div>
+    <div class="p-3 mb-2 bg-light border-top">Border Top</div>
+    <div class="p-3 mb-2 bg-light border-bottom">Border Bottom</div>
+    <div class="p-3 mb-2 bg-light border-end">Border Right</div>
+    <div class="p-3 mb-2 bg-light border-start">Border Left</div>
+
+
+
+
+    <br /><br />
+
+    <h1>Remove Borders : Remove all borders with border-0 or specific sides with border-{side}-0</h1>
+    <!--    Remove Borders: Remove all borders with border-0 or specific sides with border-{side}-0-->
+    <!--    border-top-0, border-end-0, border-bottom-0, border-start-0-->
+    <div class="border  bg-light  border-0 mb-1">No border</div>
+    <div class="border bg-light  border-top-0 mb-1">No top border</div>
+    <div class="border  bg-light border-end-0 mb-1">No right border</div>
+    <div class="border bg-light  border-bottom-0 mb-1">No bottom border</div>
+    <div class="border  bg-light border-start-0 mb-1">No left border</div>
+
+    <br /><br />
+
+
+
+    <h1>Rounded Borders : Fully Rounded Corners; rounded, rounded-0, or size-specific rounding</h1>
+    <!--Fully Rounded Corners-->
+    <!--    Rounded Borders : Fully Rounded Corners-->
+    <!--    Use rounded, rounded-0, or size-specific rounding-->
+    <div class="p-3 mb-2 bg-light border rounded">Rounded Default</div>
+    <div class="p-3 mb-2 bg-light border rounded-0">Rounded 0</div>
+    <div class="p-3 mb-2 bg-light border rounded-1">Rounded 1</div>
+    <div class="p-3 mb-2 bg-light border rounded-2">Rounded 2</div>
+    <div class="p-3 mb-2 bg-light border rounded-3">Rounded 3</div>
+    <div class="p-3 mb-2 bg-light border rounded-4">Rounded 4</div>
+    <div class="p-3 mb-2 bg-light border rounded-5">Rounded 5</div>
+
+    <br /><br />
+
+    <h1>Rounded Specific Sides :  rounded-top, rounded-end, rounded-bottom, rounded-start</h1>
+    <!--Rounded Specific Sides:Add rounded corners to specific sides :
+    rounded-top, rounded-end, rounded-bottom, rounded-start-->
+    <!-- Border Radius -->
+
+    <div class="p-3 mb-2 bg-light border rounded">Rounded Default</div>
+    <div class="p-3 mb-2 bg-light border rounded-top">Rounded Top</div>
+    <div class="p-3 mb-2 bg-light border rounded-bottom">Rounded Bottom</div>
+    <div class="p-3 mb-2 bg-light border rounded-end">Rounded Right</div>
+    <div class="p-3 mb-2 bg-light border rounded-start">Rounded Left</div>
+
+
+    <br /><br />
+
+    <h1>Special Shapes : Create circle or pill shapes:</h1>
+    <!--    Special Shapes : Create circle or pill shapes:-->
+    <div class="p-3 mb-2 bg-light w-25 border rounded-circle">Rounded Circle</div>
+    <div class="p-3 mb-2 bg-light w-25 border rounded-pill">Rounded Circle</div>
+
+
+
+    <h1>Combine more class</h1>
+    <div class="w-25 p-5 rounded-bottom-1 bg-primary mb-3">75*75</div>
+    <div class="w-25 p-5 rounded-start-2 bg-danger mb-3">75*75</div>
+    <div class="w-25 p-5 rounded-end-circle bg-info mb-3">75*75</div>
+    <div class="w-25 p-5 rounded-start-circle bg-info mb-3">75*75</div>
+    <div class="w-25 p-5 rounded-start-pill bg-success mb-3">75*75</div>
+    <div class="w-25 p-5 rounded-top-0 rounded-5 bg-success mb-3">75*75</div>
+
+    <!-- Shadows -->
+    <div class="p-3 mb-5 shadow-none">No shadow</div>
+    <div class="p-3 mb-5 shadow-sm">Small shadow</div>
+    <div class="p-3 mb-5 shadow">Regular shadow</div>
+    <div class="p-3 mb-5 shadow-lg">Larger shadow</div>
+
+    <!-- Don't go past here -->
+</div>
+<div style="margin-top: 350px"></div>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

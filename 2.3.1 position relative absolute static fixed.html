@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <title>Sticky Fix</title>
+</head>
+<body>
+<div class="container-md">
+    <!-- Sticky Positioning -->
+    <h2 class="mt-4">Sticky Positioning</h2>
+    <div class="position-sticky top-0 bg-warning text-dark p-3" style="z-index: 1020;">
+        <p class="mb-0">I stick to the top when scrolling!</p>
+    </div>
+
+    <!-- Static Positioning -->
+    <h2 class="mt-5">Static Positioning</h2>
+    <div class="bg-secondary text-white p-3 mb-4">
+        <p class="mb-0">This box has static positioning (default behavior).</p>
+    </div>
+
+    <!-- Relative and Absolute Positioning -->
+    <h2 class="mt-5">Relative and Absolute Positioning (1)</h2>
+    <div class="position-relative bg-primary text-white p-4 mb-4" style="height: 150px;">
+        <div class="position-absolute top-0 start-0 bg-danger text-white p-2">
+            I'm positioned absolutely within the relative container.
+        </div>
+    </div>
+
+    <h2 class="mt-5">Relative and Absolute Positioning (2)</h2>
+    <div class="position-relative bg-primary text-white p-4 mb-4" style="height: 150px;">
+        <p class="mb-0">This box is <strong>relative</strong>.</p>
+        <div class="position-absolute top-0 end-0 bg-danger text-white p-2">
+            I'm positioned absolutely within the relative container.
+        </div>
+        <div class="position-absolute bottom-0 start-0 bg-warning text-dark p-2">
+            I'm positioned at the bottom-left corner.
+        </div>
+    </div>
+
+    <!-- Fixed Positioning -->
+    <h2 class="mt-5">Fixed Positioning</h2>
+    <div class="position-fixed bottom-0 start-0 bg-success text-white p-3">
+        <p class="mb-0">Fixed to the top-right corner of the viewport.</p>
+    </div>
+
+    <!-- Centering with Translate -->
+    <h2 class="mt-5">Centering with Translate</h2>
+    <div class="position-relative bg-info text-white p-4" style="height: 200px;">
+        <div class="position-absolute top-50 start-50 translate-middle bg-dark text-white p-3">
+            Centered Element
+        </div>
+    </div>
+
+    <!-- Multiple Elements with Offsets -->
+    <h2 class="mt-5">Multiple Elements with Offsets</h2>
+    <div class="position-relative mt-5 bg-light" style="height: 150px;">
+        <div class="position-absolute top-0 start-0 bg-primary text-white p-2">
+            Top-Left
+        </div>
+        <div class="position-absolute top-0 end-0 bg-danger text-white p-2">
+            Top-Right
+        </div>
+        <div class="position-absolute bottom-0 start-0 bg-success text-white p-2">
+            Bottom-Left
+        </div>
+        <div class="position-absolute bottom-0 end-0 bg-warning text-dark p-2">
+            Bottom-Right
+        </div>
+    </div>
+
+    <!-- Grid of Positioned Elements -->
+    <h2 class="mt-5">Grid of Positioned Elements</h2>
+    <div class="position-relative bg-light mt-5 bg-secondary" style="height: 300px;">
+        <div class="position-absolute top-0 start-0 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-0 start-50 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-0 start-100 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-50 start-0 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-50 start-50 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-50 start-100 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-100 start-0 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-100 start-50 translate-middle p-3 bg-primary">XYZ</div>
+        <div class="position-absolute top-100 start-100 translate-middle p-3 bg-primary">XYZ</div>
+    </div>
+
+    <!-- Nested Positioned Elements -->
+    <h2 class="mt-5">Nested Positioned Elements</h2>
+    <div class="position-relative bg-light mt-5" style="height: 300px;">
+        <div class="position-absolute top-0 start-0 bg-danger p-3">XYZ</div>
+        <div class="position-absolute top-0 start-50 translate-middle-x  bg-danger p-3">XYZ</div>
+        <div class="position-absolute top-0 end-0 bg-danger p-3">XYZ</div>
+        <div class="position-absolute top-50 start-0 translate-middle-y bg-danger p-3">XYZ</div>
+        <div class="position-absolute top-50 start-50 translate-middle bg-danger p-3">XYZ</div>
+        <div class="position-absolute top-50 end-0 translate-middle-y bg-danger p-3">XYZ</div>
+        <div class="position-absolute bottom-0 start-0 bg-danger p-3">XYZ</div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x bg-danger p-3">XYZ</div>
+        <div class="position-absolute bottom-0 end-0 bg-danger p-3">XYZ</div>
+    </div>
+
+    <!-- Aligned Positioned Elements -->
+    <h2 class="mt-5">Aligned Positioned Elements</h2>
+    <div class="position-relative mt-5" style="height: 300px; width: 100%; border: 1px solid black;">
+        <div class="position-absolute top-50 start-50 translate-middle bg-primary text-white p-3">
+            Centered
+        </div>
+        <div class="position-absolute top-50 start-0 translate-middle-y bg-success text-white p-3">
+            Center Left
+        </div>
+        <div class="position-absolute top-50 end-0 translate-middle-y bg-danger text-white p-3">
+            Center Right
+        </div>
+    </div>
+
+    <!-- Specific Corner Elements -->
+    <h2 class="mt-5">Specific Corner Elements</h2>
+    <div class="position-relative mt-5" style="height: 300px; width: 100%; border: 1px solid black;">
+        <div class="position-absolute top-0 start-0  bg-primary text-white p-3">
+            Top left
+        </div>
+        <div class="position-absolute top-50 start-0 translate-middle-y bg-success text-white p-3">
+            Center
+        </div>
+        <div class="position-absolute bottom-0 start-0 bg-danger text-white p-3">
+            Bottom left
+        </div>
+    </div>
+
+    <!-- Centered Menu Items -->
+    <h2 class="mt-5">Centered Menu Items</h2>
+    <div class="position-relative bg-danger mt-5" style="height: 100px;">
+        <div class="bg-primary text-white text-center rounded-1 position-absolute top-50 translate-middle" style="left: 42%;  padding: 10px 20px;">
+            Menu 1
+        </div>
+        <div class="bg-info text-white text-center rounded-1 position-absolute top-50 translate-middle" style="left: 50%;  padding: 10px 20px;">
+            Menu 2
+        </div>
+        <div class="bg-success text-white text-center rounded-1 position-absolute top-50 translate-middle" style="left: 58%;  padding: 10px 20px;">
+            Menu 3
+        </div>
+    </div>
+
+</div>
+
+<!-- Spacer -->
+<div style="margin-top: 500px"></div>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
