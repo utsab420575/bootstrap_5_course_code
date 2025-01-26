@@ -1,272 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <title>Bootstrap Sandbox | Buttons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style_navbar.css">
 </head>
 <body>
-<div class="container">
-    <h1 class="mb-5">Buttons</h1>
-
-    <h1 class="mb-5">Different type of button</h1>
-    <!-- Styles -->
-    <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-success">Success</button>
-    <button class="btn btn-danger">Danger</button>
-    <button class="btn btn-warning">Warning</button>
-    <button class="btn btn-info">Info</button>
-    <button class="btn btn-light">Light</button>
-    <button class="btn btn-dark">Dark</button>
-    <button class="btn btn-link">Link</button>
-
-    <br /><br />
-    <hr>
-
-    <h1 class="mb-5">Button Tags(type=submit,reset,button)</h1>
-
-    <!--    Button Element:Use Case: For form submission or general button functionality with JavaScript.-->
-    <h3>Button tag with type=submit</h3>
-    <button class="btn btn-primary" type="submit">Button</button>
-
-    <!--  Use Case: When you want a button to act as a link, navigating to another page or anchor.-->
-    <h3>Link Formatted As Button</h3>
-    <a href="#" class="btn btn-primary">Click Me</a>
-
-    <h3>Input tag as submit button</h3>
-    <!--    Submit Button :Use Case: Automatically submits the form when clicked.-->
-    <input class="btn btn-primary" type="submit" value="Submit Form">
-
-    <h3>Input tag as reset button</h3>
-    <!--    Reset Button: Use Case: Resets all form fields to their default values.-->
-    <input class="btn btn-primary" type="submit" value="Reset All">
-
-    <h3>Input tag as button</h3>
-    <!--    Input Button: Use Case: Acts as a clickable button, often tied to JavaScript events.-->
-    <input class="btn btn-primary" type="submit" value="Action Performed">
-
-    <br /><br />
-    <hr>
-
-    <h1>Sizes: Large Small Custom</h1>
-    <!-- Button Sizes -->
-    <button class="btn btn-primary btn-lg">Regular</button>
-    <button class="btn btn-secondary btn-sm">Small</button>
-    <button class="btn btn-danger btn-lg">Large</button>
-    <button type="button" class="btn btn-success"
-            style="--bs-btn-padding-y: 40px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 30px;">
-        Custom button
-    </button>
-
-
-    <br /><br />
-    <hr>
-
-    <h1>Button States(Active , Disable)</h1>
-    <!-- Button States -->
-    <button class="btn btn-primary">Regular</button>
-    <button class="btn btn-primary disabled">Disabled</button>
-    <button class="btn btn-primary active">Active</button>
-
-    <br /><br />
-    <hr>
-
-    <h1>Outline buttons</h1>
-    <!-- Outline Buttons -->
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-outline-success">Success</button>
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-outline-info">Info</button>
-    <button type="button" class="btn btn-outline-light">Light</button>
-    <button type="button" class="btn btn-outline-dark">Dark</button>
-
-    <br /><br />
-    <hr>
-
-    <h1>Vertically Button</h1>
-    <!-- Block Buttons -->
-    <div class="d-grid vstack gap-3">
-        <button class="btn btn-primary">Submit</button>
-        <button class="btn btn-danger">Cancel</button>
-    </div>
-    <hr>
-
-    <h1>Block Button</h1>
-    <!-- Block Buttons -->
-    <div class="d-grid gap-2 mb-4">
-        <button class="btn btn-primary" type="button">Button</button>
-        <button class="btn btn-primary" type="button">Button</button>
-    </div>
-
-    <div class="d-grid gap-2 col-6 mx-auto mb-5">
-        <button class="btn btn-secondary" type="button">Button</button>
-        <button class="btn btn-secondary" type="button">Button</button>
-    </div>
-
-    <h1>Button In Left Right</h1>
-    <div class="d-flex">
-        <button class="btn btn-primary me-auto">Left Button</button>
-        <button class="btn btn-secondary ms-auto">Right Button</button>
-    </div>
-    <hr>
-
-    <h1>Button In Right</h1>
-    <div class="d-flex justify-content-end">
-        <button class="btn btn-primary me-2">Left Button</button>
-        <button class="btn btn-secondary">Right Button</button>
-    </div>
-    <hr>
-
-    <h1>Button In Left</h1>
-    <div class="d-flex justify-content-start">
-        <button class="btn btn-primary me-2">Left Button</button>
-        <button class="btn btn-secondary">Right Button</button>
-    </div>
-    <hr>
-
-
-    <h1>Button In Left&Right</h1>
-    <div class="d-flex justify-content-between">
-        <!-- Left Buttons -->
-        <div>
-            <button class="btn btn-primary me-2">Left Button 1</button>
-            <button class="btn btn-secondary">Left Button 2</button>
-        </div>
-
-        <!-- Right Buttons -->
-        <div>
-            <button class="btn btn-primary me-2">Right Button 1</button>
-            <button class="btn btn-secondary">Right Button 2</button>
-        </div>
-    </div>
-
-
-    <br /><br />
-    <hr>
-
-    <h1>Wrap a series of buttons with .btn in .btn-group.</h1>
-    <!-- Button Group -->
-    <div class="btn-group" role="group">
-        <button class="btn btn-primary">Left</button>
-        <button class="btn btn-primary">Middle</button>
-        <button class="btn btn-primary">Right</button>
-    </div>
-    <br /><br />
-    <hr>
-
-
-    <h1> groups of links </h1>
-    <div class="btn-group">
-        <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
-        <a href="#" class="btn btn-primary">Link</a>
-        <a href="#" class="btn btn-primary">Link</a>
-    </div>
-
-    <br /><br />
-    <hr>
-
-
-    <h1>Toolbar: Making Multiple Group Of Button</h1>
-    <!-- Button Toolbar -->
-    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group me-2" role="group" aria-label="First group">
-            <button type="button" class="btn btn-primary">1</button>
-            <button type="button" class="btn btn-primary">2</button>
-            <button type="button" class="btn btn-primary">3</button>
-            <button type="button" class="btn btn-primary">4</button>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="Second group">
-            <button type="button" class="btn btn-secondary">5</button>
-            <button type="button" class="btn btn-secondary">6</button>
-            <button type="button" class="btn btn-secondary">7</button>
-        </div>
-        <div class="btn-group" role="group" aria-label="Third group">
-            <button type="button" class="btn btn-info">8</button>
-        </div>
-    </div>
-
-    <br /><br />
-    <hr>
-
-
-    <h1>Toolbar Sizing: Making Multiple Group Of Button</h1>
-
-    <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-        <button type="button" class="btn btn-outline-primary">Left</button>
-        <button type="button" class="btn btn-outline-primary">Middle</button>
-        <button type="button" class="btn btn-outline-primary">Right</button>
-    </div>
-    <br>
-    <div class="btn-group" role="group" aria-label="Default button group">
-        <button type="button" class="btn btn-outline-primary">Left</button>
-        <button type="button" class="btn btn-outline-primary">Middle</button>
-        <button type="button" class="btn btn-outline-primary">Right</button>
-    </div>
-    <br>
-    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-        <button type="button" class="btn btn-outline-primary">Left</button>
-        <button type="button" class="btn btn-outline-primary">Middle</button>
-        <button type="button" class="btn btn-outline-primary">Right</button>
-    </div>
-    <br /><br />
-    <hr>
-
-
-    <h1>Dropdown Button</h1>
-    <!-- Dropdown Button -->
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
-            Dropdown Button
+<!--1.Add image and align with text-->
+<!--2.Here Having search form-->
+<!--menu item in left   <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item">Link 1</a></li>
-            <li><a href="#" class="dropdown-item">Link 2</a></li>
-            <li><a href="#" class="dropdown-item">Link 3</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
+</nav>-->
 
-    <br /><br />
-    <hr>
-    <h1>Dropdown Button Nesting</h1>
-    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-primary">1</button>
-        <button type="button" class="btn btn-primary">2</button>
 
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+
+
+
+<!--1.Add image and align with text-->
+<!--2.No Search Form & No disable button-->
+<!--menu item in left   <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
-    <br /><br />
-    <hr>
+</nav>-->
 
 
 
+<!--1.Add image and align with text-->
+<!--2.No Search Form & No disable button-->
+<!--3.Menu item in right  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">-->
+<!-- 4.drop down item showing in right to left  <ul class="dropdown-menu dropdown-menu-end">-->
+<!-- 5.add space between menu items <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">-->
 
+<!--
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
 
-    <h1>Radio Button Group</h1>
-    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
-        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-        <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
-        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-        <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
-        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-        <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+            </ul>
+        </div>
     </div>
+</nav>
+-->
 
-    <!-- Don't go past here -->
-</div>
-<div style="margin-top: 350px"></div>
+
+
+
+<!--1.Add image and align with text-->
+<!--2.No Search Form & No disable button-->
+<!--3.Menu item in center <ul class="navbar-nav m-auto mb-2 mb-lg-0">-->
+<!-- 4.drop down item showing in right to left  <ul class="dropdown-menu dropdown-menu-end">-->
+<!--4. navbar-expand screen size sm(toogle button showing when : Navbar collapses at 576px and below ) <nav class="navbar navbar-expand-sm bg-body-tertiary">-->
+<!--<nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
+
+
+
+<!--1.Add image and align with text-->
+<!--2.No Search Form & No disable button-->
+<!--3.Menu item in center <ul class="navbar-nav m-auto mb-2 mb-lg-0">-->
+<!-- 4.drop down item showing in right to left  <ul class="dropdown-menu dropdown-menu-end">-->
+<!--4. navbar-expand screen size sm(toogle button showing when : Navbar collapses at 576px and below ) <nav class="navbar navbar-expand-sm bg-body-tertiary">-->
+<!--5. padding add for navbar for large screen(>=px)-->
+<!--6. add gap-5 between menu items-->
+<!--7.add button -->
+<!--8. padding for button-->
+
+
+<!--<nav class="navbar navbar-expand-sm bg-body-tertiary p-md-5">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button type="button" class="btn btn-primary py-2 px-4" type="">Sign up</button>
+        </div>
+    </div>
+</nav>-->
+
+
+
+
+<!--1.navbar color change  <nav class="navbar navbar-expand-sm bg-primary-subtle">-->
+<!--2.menu in right   <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">-->
+<!--3.button margin left <button type="button" class="btn btn-primary py-2 px-4 ms-4" type="">Sign up</button>-->
+<!--4.button add-->
+<!--5. we can give containter only  <div class="container-fluid">-->
+
+<nav class="navbar navbar-expand-sm bg-primary-subtle ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end bg-success">
+                        <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                        <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button type="button" class="btn btn-primary py-2 px-4 ms-4" type="">Sign up</button>
+            <button type="button" class="btn btn-danger py-2 px-4 ms-4" type="">Login</button>
+        </div>
+    </div>
+</nav>
+
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
