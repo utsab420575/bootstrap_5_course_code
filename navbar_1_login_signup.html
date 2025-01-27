@@ -12,8 +12,9 @@
     <style>
         /* Custom hover effect for dropdown items */
         .dropdown-item:hover {
-
-            background-color: rgba(255 , 255, 255, 1);
+            /*background-color: rgba(248, 249, 250, 1);*/
+            background-color: rgb(237, 239, 241);
+            /*background-color: rgba(255 , 255, 255, 1);*/
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .dropdown-item:focus {
@@ -21,24 +22,28 @@
             color: #fff;
         }
 
-        .dropdown-item i {
-            margin-right: 0.5rem; /* Add spacing between icons and text */
-            vertical-align: middle; /* Align icons with text */
+        .dropdown-divider {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+       /* .dropdown-item i {
+            margin-right: 0.5rem; !* Add spacing between icons and text *!
+            vertical-align: middle; !* Align icons with text *!
         }
 
         .dropdown-item .badge {
-            font-size: 0.75rem; /* Smaller badge size for consistency */
+            font-size: 0.75rem; !* Smaller badge size for consistency *!
         }
 
         .dropdown-divider {
-            border-color: rgba(255, 255, 255, 0.2); /* Divider color to match the dropdown */
+            border-color: rgba(255, 255, 255, 0.2); !* Divider color to match the dropdown *!
         }
+*/
     </style>
 
 </head>
 <body>
 <!--when navbar expand from collapse;here we mention when screen is small(>=576px) than expand->all menu showing -->
-<nav class="navbar navbar-expand-sm bg-primary-subtle ">
+<nav class="navbar sticky-top navbar-expand-sm bg-primary-subtle ">
 <!--    navbar screening like container/container-fluid-->
     <div class="container-fluid">
 <!--        left icon like image with icon-->
@@ -66,7 +71,7 @@
             gap-1 : for all screen (here : for small screen(>=576px and <768px))
             gap-md-4 : for md screen(>=768px) gap-4-->
 
-            <ul class="navbar-nav m-auto m-sm-0 ms-sm-auto mb-2 mb-md-0 gap-1 gap-sm-4">
+            <ul class="navbar-nav m-auto m-md-0 ms-md-auto mb-2 mb-md-0 gap-1 gap-md-4">
 
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -77,13 +82,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
                     </a>
+                    <ul class="dropdown-menu dropdown-menu-end bg-white">
+                        <li><a class="dropdown-item text-dark" href="#">Action</a></li>
+                        <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider bg-dark"></li>
+                        <li><a class="dropdown-item text-dark" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+               <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
                     <ul class="dropdown-menu dropdown-menu-end bg-light">
-                        <!-- Menu Items -->
+                        &lt;!&ndash; Menu Items &ndash;&gt;
                         <li>
                             <a class="dropdown-item text-dark" href="#">
                                 <i class="ri-user-line align-middle me-1"></i> Profile
@@ -114,9 +130,44 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
 
             </ul>
+
+            <!-- according to screen size here i make button responsive-->
+            <!--<button type="button" class="btn btn-primary py-sm-2 px-sm-0  px-md-4 me-2 ms-0 ms-md-2" type="">Sign up</button>
+            <button type="button" class="btn btn-danger py-sm-2 px-sm-0  px-md-4 " type="">Login</button>-->
+
+
+            <!-- Responsive Buttons -->
+            <!--Class Explanation
+            d-flex:
+
+            Applies the flexbox layout to the container, making its children (e.g., buttons) flexible and aligned using flexbox rules.
+            By default, this means the children are laid out horizontally.
+            flex-column:
+
+            On extra small screens (<576px), the children are stacked vertically.
+            d-sm-flex:
+
+            From small screens (≥576px) and larger, the container switches back to a flexbox layout (horizontal by default).
+            flex-sm-row:
+
+            From small screens (≥576px), the children are laid out horizontally in a row.
+            mt-3 mt-sm-0:
+
+            mt-3: Adds a top margin of 1rem (16px) to the container on extra small screens (<576px).
+            mt-sm-0: Removes the top margin on small screens (≥576px) and larger.
+            gap-3 gap-sm-1 gap-md-2:
+
+            Controls the spacing (gap) between the children based on screen size:
+            gap-3: On extra small screens (<576px), the gap between children is 1rem (16px).
+            gap-sm-1: On small screens (≥576px), the gap between children is reduced to 0.25rem (4px).
+            gap-md-2: On medium screens (≥768px), the gap between children is slightly increased to 0.5rem (8px).-->
+            <div class="d-flex flex-column d-sm-flex flex-sm-row mt-3 mt-sm-0 gap-3 gap-sm-1 gap-md-2 ms-md-2">
+                <button type="button" class="btn btn-primary py-sm-2 px-sm-0 px-md-4">Sign up</button>
+                <button type="button" class="btn btn-danger py-sm-2 px-sm-0 px-md-4">Login</button>
+            </div>
 
         </div>
     </div>
