@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        /* Optional: Define additional styles for dark and light themes */
+    </style>
+</head>
+<body>
+<div class="container">
+    <button id="theme-toggle" class="btn btn-primary mt-5">Toggle Theme</button>
+
+    <div class="card mt-5" style="width: 500px;">
+        <div class="card-header">Dark Mode Card</div>
+        <div class="card-body">
+            Utsab Roy Utsab Roy Utsab Roy Utsab Roy
+        </div>
+    </div>
+
+    <div class="card mt-5" style="width: 500px;" data-bs-theme="light">
+        <div class="card-header">Light Mode Card</div>
+        <div class="card-body">
+            Utsab Roy Utsab Roy Utsab Roy Utsab Roy
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-bs-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-bs-theme', newTheme);
+    });
+</script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

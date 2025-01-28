@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid border border-1 border-danger">
+
+        <!--        If you don’t define a column width, columns will share the available space equally.-->
+        <h1 class="mb-5">If you don’t define a column width, columns will share the available space equally.</h1>
+        <div class="row bg-success">
+            <div class="col bg-light text-dark border p-2">1 of 2</div>
+            <div class="col bg-light text-dark  border p-2">2 of 2</div>
+        </div>
+
+        <div class="row bg-success">
+            <div class="col bg-light text-dark border p-2">1 of 2</div>
+            <div class="col bg-light text-dark  border p-2">2 of 2</div>
+            <div class="col bg-light text-dark  border p-2">3 of 2</div>
+        </div>
+
+        <!--        col-size:You can specify how many of these 12 columns a single element should take up.-->
+        <h1 class="mb-5 mt-5">Specify Column Size</h1>
+        <div class="row bg-success">
+            <div class="col-6 bg-light text-dark border p-2">1 of 2</div>
+            <div class="col-6 bg-light text-dark  border p-2">2 of 2</div>
+        </div>
+
+        <div class="row bg-success">
+            <div class="col-4 bg-light text-dark border p-2">1 of 2</div>
+            <div class="col-8 bg-light text-dark  border p-2">2 of 2</div>
+        </div>
+
+
+        <!--        col-screen size-size:You can specify which screen show how many column in single row-->
+        <h1 class="mb-5 mt-5">Responsive column</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2   bg-light text-dark border px-5 py-3">
+                1 of 7
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  bg-light text-dark border px-4 py-3">
+                2 of 7
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  bg-light text-dark border px-4 py-3">
+                3 of 7
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  bg-light text-dark border px-4 py-3">
+                4 of 7
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  bg-light text-dark border px-4 py-3">
+                5 of 7
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  bg-light text-dark border px-4 py-3">
+                6 of 7
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  bg-light text-dark border px-4 py-3">
+                7 of 7
+            </div>
+        </div>
+
+
+        <!-- row-cols-number :  Use the responsive .row-cols-* classes to quickly set the number of columns-->
+        <h1 class="mb-5 mt-5">row-cols-number</h1>
+        <div class="row row-cols-2">
+            <div class=" col  bg-light text-dark border px-5 py-3">
+                1 of 7
+            </div>
+            <div class=" col bg-light text-dark border px-4 py-3">
+                2 of 7
+            </div>
+            <div class=" col bg-light text-dark border px-4 py-3">
+                3 of 7
+            </div>
+            <div class=" col bg-light text-dark border px-4 py-3">
+                4 of 7
+            </div>
+            <div class=" col bg-light text-dark border px-4 py-3">
+                5 of 7
+            </div>
+            <div class=" col bg-light text-dark border px-4 py-3">
+                6 of 7
+            </div>
+            <div class=" col bg-light text-dark border px-4 py-3">
+                7 of 7
+            </div>
+        </div>
+
+
+        <!-- Nesting: we can put row inside col-->
+        <h1 class="mb-5 mt-5">Nesting(Example 1)</h1>
+        <!-- Parent Row -->
+        <div class="row">
+            <!-- First Main Column -->
+            <div class="col-12 col-md-6 bg-light text-dark p-3 border">
+                <h5>Main Column 1</h5>
+                <p>This is the first main column with a nested row inside:</p>
+
+                <!-- Nested Row -->
+                <div class="row">
+                    <div class="col-6 border border-success text-center py-2">Nested Col 1</div>
+                    <div class="col-6 border border-success text-center py-2">Nested Col 2</div>
+                    <div class="col-6 border border-success text-center py-2">Nested Col 3</div>
+                    <div class="col-6 border border-success text-center py-2">Nested Col 4</div>
+                </div>
+            </div>
+
+            <!-- Second Main Column -->
+            <div class="col-12 col-md-6 bg-light text-dark p-3 border">
+                <h5>Main Column 2</h5>
+                <p>This is the second main column with a nested row inside:</p>
+
+                <!-- Nested Row -->
+                <div class="row">
+                    <div class="col-4 border border-primary text-center py-2">Nested Col 1</div>
+                    <div class="col-8 border border-primary text-center py-2">Nested Col 2</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Nesting: we can put row inside col-->
+        <h1 class="mb-5 mt-5">Nesting(Example 2)</h1>
+        <div class="row">
+            <div class="col-sm-3 bg-danger p-4">
+                Level 1: .col-sm-3
+            </div>
+            <div class="col-sm-9 bg-success py-4">
+                <div class="row">
+                    <div class="col-8 col-sm-6 border border-success-subtle text-center py-3"> Level 2: .col-8 .col-sm-6</div>
+                    <div class="col-4 col-sm-6 border border-success-subtle text-center py-3"> Level 2: .col-4 .col-sm-6</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Gutter is the space (margin or padding) between columns in the grid system.
+        Gutters are used to control the spacing between columns and rows to ensure a clean and structured layout.-->
+        <h1 class="mb-5 mt-5">Gutter (make column space and row space)</h1>
+        <div class="row g-5">
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+        </div>
+
+
+        <h1 class="mb-5 mt-5">gx(gx-4: make column space) gy (g-2: make row space)</h1>
+        <div class="row gx-4 gy-2">
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+            <div class=" col-md-4">
+                <div class="bg-light text-dark border px-5 py-3"> 1 of 4</div>
+            </div>
+        </div>
+
+        <!-- In Bootstrap, an offset is used to add empty space (or margin) to the left of a column, effectively shifting it horizontally-->
+        <h1 class="mb-5 mt-5">offset is used to add empty space in left</h1>
+        <div class="row">
+            <div class="col-6 offset-0 offset-sm-2 offset-md-3 offset-lg-4 offset-xl-5 offset-xxl-6 bg-light text-dark border p-3 text-center">Shift Me</div>
+        </div>
+
+
+        <!-- Ordering -->
+        <h1 class="mb-5 mt-5">Ordering</h1>
+        <div class="row">
+            <div class="col bg-light text-dark border px-5 py-3 order-2">Column 1</div>
+            <div class="col bg-light text-dark border px-5 py-3 order-4">Column 2</div>
+            <div class="col bg-light text-dark border px-5 py-3 order-1">Column 3</div>
+            <div class="col bg-light text-dark border px-5 py-3r order-3">Column 4</div>
+        </div>
+
+
+
+
+    </div>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -25,23 +25,38 @@
         .dropdown-divider {
             border-color: rgba(255, 255, 255, 0.5);
         }
-       /* .dropdown-item i {
-            margin-right: 0.5rem; !* Add spacing between icons and text *!
-            vertical-align: middle; !* Align icons with text *!
+
+
+        /* Change the navbar-toggler icon color */
+        .navbar-toggler .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.8%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
         }
 
-        .dropdown-item .badge {
-            font-size: 0.75rem; !* Smaller badge size for consistency *!
+        /* Change the background and border color of the button */
+        .navbar-toggler {
+            border-color: #ffffff; /* Button border color */
+            background-color: #007bff; /* Button background color */
         }
 
-        .dropdown-divider {
-            border-color: rgba(255, 255, 255, 0.2); !* Divider color to match the dropdown *!
+        /* Optional: Add hover styles */
+        .navbar-toggler:hover {
+            background-color: #0056b3; /* Darker shade of blue */
+            border-color: #0056b3;
+            box-shadow: 0 0 10px rgba(179, 0, 164, 1); /* Blue shadow around the button */
+            /*box-shadow: none;*/
         }
-*/
+
     </style>
 
 </head>
 <body>
+<!--navbar: A Bootstrap utility class for creating a responsive navigation bar.
+
+sticky-top: Makes the navigation bar stick to the top of the page when scrolling. It stays visible as you scroll down.
+
+navbar-expand-sm: Specifies that the navbar should be collapsed (stacked vertically) on smaller screens and expanded (horizontal layout) on screen widths small (sm) and above (≥576px).
+
+bg-primary-subtle: Adds a subtle background color variation based on the primary theme color (available in Bootstrap 5.3+). The primary theme color is defined by your Bootstrap configuration.-->
 <!--when navbar expand from collapse;here we mention when screen is small(>=576px) than expand->all menu showing -->
 <nav class="navbar sticky-top navbar-expand-sm bg-primary-subtle ">
 <!--    navbar screening like container/container-fluid-->
@@ -51,11 +66,17 @@
             <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             Bootstrap
         </a>
-        <!--        when collapse in extra small screen(<576px) than  this button showing-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- when collapse in extra small screen(<576px) than  this button showing-->
+
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <!--   collapse work for small screen size(<576px;)-->
+        <!-- Collapsible menu -->
+        <!--On small screens (xsm), the navbar menu is collapsed and hidden by default. Clicking the toggle button will display the menu items.
+        On larger screens (sm, md, etc.), the menu is always visible.-->
         <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
 
             <!--   for navbar in left         <ul class="navbar-nav m-auto m-md-0 me-md-auto mb-2 mb-md-0 gap-1 gap-md-4">-->
@@ -94,43 +115,7 @@
                     </ul>
                 </li>
 
-               <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end bg-light">
-                        &lt;!&ndash; Menu Items &ndash;&gt;
-                        <li>
-                            <a class="dropdown-item text-dark" href="#">
-                                <i class="ri-user-line align-middle me-1"></i> Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-dark" href="#">
-                                <i class="ri-wallet-2-line align-middle me-1"></i> My Wallet
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-dark d-block" href="#">
-                                <span class="badge bg-success float-end mt-1">11</span>
-                                <i class="ri-settings-2-line align-middle me-1"></i> Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-dark" href="#">
-                                <i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider bg-light">
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-danger" href="#">
-                                <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout
-                            </a>
-                        </li>
-                    </ul>
-                </li>-->
+
 
             </ul>
 
@@ -173,6 +158,9 @@
     </div>
 </nav>
 
+<div class="container">
+
+</div>
 
 
 

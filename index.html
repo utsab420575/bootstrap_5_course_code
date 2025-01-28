@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,125 +7,298 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
     <style>
-        /* Custom hover effect for dropdown items */
-        .dropdown-item:hover {
 
-            background-color: rgba(255 , 255, 255, 1);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .dropdown-item:focus {
-            background-color: #218838;
-            color: #fff;
-        }
-
-        .dropdown-item i {
-            margin-right: 0.5rem; /* Add spacing between icons and text */
-            vertical-align: middle; /* Align icons with text */
-        }
-
-        .dropdown-item .badge {
-            font-size: 0.75rem; /* Smaller badge size for consistency */
-        }
-
-        .dropdown-divider {
-            border-color: rgba(255, 255, 255, 0.2); /* Divider color to match the dropdown */
-        }
     </style>
-
 </head>
 <body>
-<!--when navbar expand from collapse;here we mention when screen is small(>=576px) than expand->all menu showing -->
-<nav class="navbar navbar-expand-sm bg-primary-subtle ">
-<!--    navbar screening like container/container-fluid-->
-    <div class="container-fluid">
-<!--        left icon like image with icon-->
-        <a class="navbar-brand" href="#">
-            <img class="mt-0" src="public/image/app-store.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            Bootstrap
-        </a>
-        <!--        when collapse in extra small screen(<576px) than  this button showing-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--   collapse work for small screen size(<576px;)-->
-        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-
-            <!--   for navbar in left         <ul class="navbar-nav m-auto m-md-0 me-md-auto mb-2 mb-md-0 gap-1 gap-md-4">-->
-
-            <!-- navbar in right  write regarding to your need ; make navbar responsive-->
+    <div class="container">
+        <div class="row">
             <!--
-            m-auto: for Small screens (< md): <ul> place in center
-            m-md-0: clear all margin; Overrides the m-auto class starting from the medium (md) breakpoint (≥ 768px), removing all margins.
-            ms-md-auto: Applies a left align from the medium (md) breakpoint(>=768px),
-            ms-md-auto: Applies a left align from the medium (md) breakpoint(>=768px),
-            mb-2 : margin bottom for all screen size (here : for small screen(>=576px and <768px))
-            mb-md-0 : for md screen(>=768px) margin bottom 0
-            gap-1 : for all screen (here : for small screen(>=576px and <768px))
-            gap-md-4 : for md screen(>=768px) gap-4-->
+            row =12 column width
+            div class=col-6 means this div take 6 colulmn  width from row
+            div class=col-12 means this div take 12 colulmn width from row
 
-            <ul class="navbar-nav m-auto m-sm-0 ms-sm-auto mb-2 mb-md-0 gap-1 gap-sm-4">
+            if we not give col-12 above d-flex:
+            Not take up the full width of the row by default.
+            Instead, its width will depend on its content-->
+            <div class="col-md-12">
+                <!--    d-flex container take full space(col-12)-->
+                <h1>d-flex take full space (col-12)</h1>
+                <div class="d-flex p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
 
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
+                <hr>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end bg-light">
-                        <!-- Menu Items -->
-                        <li>
-                            <a class="dropdown-item text-dark" href="#">
-                                <i class="ri-user-line align-middle me-1"></i> Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-dark" href="#">
-                                <i class="ri-wallet-2-line align-middle me-1"></i> My Wallet
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-dark d-block" href="#">
-                                <span class="badge bg-success float-end mt-1">11</span>
-                                <i class="ri-settings-2-line align-middle me-1"></i> Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-dark" href="#">
-                                <i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider bg-light">
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-danger" href="#">
-                                <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                <!--    d-flex container take only space which it need -->
+                <h1>d-flex take depend on content</h1>
+                <div class="d-inline-flex p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
 
-            </ul>
+                <hr>
 
+
+                <!--    flex-Row(by default) Direction:left to right-->
+                <h1>flex-row: Items in a row (default).</h1>
+                <div class="d-flex flex-row p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!--    flex-Row(by default) Direction:right to left(reverse)-->
+                <h1> flex-row-reverse: Items in a reversed row.</h1>
+                <div class="d-flex flex-row-reverse p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!--    flex-column: Items in a column.-->
+                <h1>flex-column Direction:top to bottom</h1>
+                <div class="d-flex flex-column p-3 bg-secondary text-white h-25">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!--    flex-column-reverse: Items in a reversed column. -->
+                <h1>flex-column Direction:bottom to top</h1>
+                <div class="d-flex flex-column-reverse p-3 bg-secondary text-white h-25">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+
+
+                <!-- Justify Content Utilities -->
+                <!-- Control alignment along the main axis:-->
+                <!-- justify-content-start: Items align at the start (default).-->
+                <h1>justify-content-start: Items align at the start (default).</h1>
+                <div class="d-flex justify-content-start p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- justify-content-center: Items align at the center.-->
+                <h1>justify-content-center: Items align at the center.</h1>
+                <div class="d-flex justify-content-center p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- justify-content-end: Items align at the end.-->
+                <h1>justify-content-end: Items align at the end.</h1>
+                <div class="d-flex justify-content-end p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- justify-content-between: Space between items.-->
+                <h1>jjustify-content-between: Space between items.</h1>
+                <div class="d-flex justify-content-between p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- justify-content-around: Equal space around items.-->
+                <h1>justify-content-around: Equal space around items.</h1>
+                <div class="d-flex justify-content-around p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+
+
+
+                <!-- Align Items Utilities -->
+                <!-- Control alignment along the cross axis:(Y-AXIS)-->
+                <!-- align-items-start: Aligns items at the start of the cross axis.-->
+                <h1>align-items-start: Aligns items at the start(top) of the cross axis(Y-axis).</h1>
+                <div class="d-flex align-items-start p-3 bg-secondary text-white h-25">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- align-items-center: Aligns items at the center of the cross axis.-->
+                <h1>align-items-center: Aligns items at the center of the cross axis.</h1>
+                <div class="d-flex align-items-center p-3 bg-secondary text-white h-25">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+
+                <!-- align-items-end: Aligns items at the end of the cross axis.-->
+                <h1>align-items-end: Aligns items at the end of the cross axis.</h1>
+                <div class="d-flex align-items-end p-3 bg-secondary text-white h-25">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+
+                <!-- align-items-stretch: Stretches items to fill the cross axis (default).-->
+                <h1>align-items-stretch: Stretches items to fill the cross axis (default).</h1>
+                <div class="d-flex align-items-stretch p-3 bg-secondary text-white h-25">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+
+
+
+                <!-- Align Self Utilities -->
+                <!-- Override the cross-axis(Y-axis) alignment for specific items:-->
+                <!-- align-self-start: Aligns items at the start of the cross axis.-->
+                <h1>align-items-start: Aligns items at the start(top) of the cross axis(Y-axis).</h1>
+                <div class="d-flex align-items-stretch p-3 bg-secondary text-white" style="height: 400px;">
+                    <div class="p-3 bg-info align-self-start">My Flex Item One</div>
+                    <div class="p-3 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- align-self-center: Aligns  single items at the center of the cross axis.-->
+                <h1>align-self-center: Aligns items at the start(top) of the cross axis(Y-axis).</h1>
+                <div class="d-flex align-items-start p-3 bg-secondary text-white" style="height: 400px;">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger align-self-center">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- align-self-end: Aligns  single items at the end of the cross axis.-->
+                <h1>align-self-end: Aligns items at the end(bottom) of the cross axis(Y-axis).</h1>
+                <div class="d-flex align-items-start p-3 bg-secondary text-white" style="height: 400px;">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger ">My Flex Item Two</div>
+                    <div class="p-3 bg-primary align-self-end">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+                <!-- align-self-stretch:  single items streetch d of the cross axis.-->
+                <h1>align-self-stretch: Aligns items stretch of the cross axis(Y-axis).</h1>
+                <div class="d-flex align-items-start p-3 bg-secondary text-white" style="height: 400px;">
+                    <div class="p-3 bg-info">My Flex Item One</div>
+                    <div class="p-3 bg-danger align-self-stretch">My Flex Item Two</div>
+                    <div class="p-3 bg-primary ">My Flex Item Three</div>
+                </div>
+
+                <hr>
+
+
+               <!-- To use flex-fill, ensure the parent element has the d-flex class
+                 then apply flex-fill to the child elements you want to stretch.-->
+                <!--Item one take width according to content
+                Item three take width according to content
+                Item two and four take remaining space-->
+                <h1>flex-fill take available space</h1>
+                <div class="d-flex p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info ">My Flex Item One</div>
+                    <div class="p-3 bg-danger flex-fill">My Flex Item Two</div>
+                    <div class="p-3 bg-primary">My Flex Item Three</div>
+                    <div class="p-3 bg-success flex-fill">My Flex Item Four</div>
+                </div>
+
+                <hr>
+
+
+               <!-- Wrapping Utilities
+                Control whether items wrap or not:
+
+                flex-wrap: Items wrap to the next line (default).
+                flex-nowrap: Items stay in a single line.
+                flex-wrap-reverse: Items wrap in reverse.-->
+                <h1>flex-wrap : wrapping into next line</h1>
+                <div class="d-flex flex-nowrap p-3 bg-secondary text-white">
+                    <div class="p-3 col-6 bg-info ">My Flex Item One</div>
+                    <div class="p-3 col-6 bg-danger">My Flex Item Two</div>
+                    <div class="p-3 col-3 bg-primary">My Flex Item Three</div>
+                    <div class="p-3 col-3 bg-success">My Flex Item Four</div>
+                </div>
+
+                <hr>
+
+
+                <!-- Grow and shrink 
+                Control how items grow or shrink using:
+                Grow: like as flex-fill
+                flex-grow-0: Disable growing.
+                flex-grow-1: Enable growing.
+                flex item one : take available space
+                flex item two,three,four : take  space as content
+               -->
+                <h1> flex item one : take available space</h1>
+                <div class="d-flex p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info flex-grow-1">My Flex Item One</div>
+                    <div class="p-3  bg-danger">My Flex Item Two</div>
+                    <div class="p-3  bg-primary">My Flex Item Three</div>
+                    <div class="p-3  bg-success">My Flex Item Four</div>
+                </div>
+
+                <hr>
+
+                <!--Use .flex-shrink-* utilities to toggle a flex item’s ability to shrink if necessary.
+                In the example below, the second flex item with .flex-shrink-1 is forced to wrap its contents
+                to a new line, “shrinking” to allow more space for the previous flex item with .w-100.-->
+
+                <!--flex-shrink-0: Disable shrinking.
+                flex-shrink-1: Enable shrinking.-->
+                <h1> flex item two : try to shrink for giving space to item one</h1>
+                <div class="d-flex p-3 bg-secondary text-white">
+                    <div class="p-3 bg-info w-100">My Flex Item One</div>
+                    <div class="p-3  bg-danger">My Flex Item Two</div>
+                </div>
+
+                <hr>
+
+            </div>
         </div>
     </div>
-</nav>
-
-
-
-
-
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
