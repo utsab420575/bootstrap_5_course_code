@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        .fixed-image-height {
+            height: 200px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            width: 100%; /* Ensures the image stretches to the full width of the card */
+        }
+    </style>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--
+    ( un-order list এর item )
+    list group is an unordered list.
+    -->
+    <h1 class="mt-2">Make un-order list as group list</h1>
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <!--Add .active  indicate the current active selection.-->
+    <h1 class="mt-2">.active indicate the current active selection</h1>
+    <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">An active item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+
+    <!-- Replace <li> with <a> or <button> to make list items clickable. -->
+    <h1 class="mt-2">we can add link in list-group</h1>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            The current link item
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+    </div>
+
+    <!-- Replace <li> with <a> or <button> to make button items clickable. -->
+    <h1 class="mt-2">we can add button in list-group</h1>
+    <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            The current button
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">A second button item</button>
+        <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+        <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+        <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+    </div>
+
+    <!--    flush can remove border from list-group-->
+    <!-- Add .list-group-flush to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards). -->
+    <h1 class="mt-2">List group using flush</h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+
+    <!--    Add the .list-group-numbered modifier class (and optionally use an <ol> element) to opt into numbered list group items.-->
+    <!--    we can add number in list automatically-->
+    <h1 class="mt-2">List group with number</h1>
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item">A list item</li>
+        <li class="list-group-item">A list item</li>
+        <li class="list-group-item">A list item</li>
+    </ol>
+
+    <!--    We can make list group as horizontal-->
+    <!--    Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints.-->
+    <h1 class="mt-2">Horizontal List group</h1>
+    <!-- First Horizontal List Group -->
+    <ul class="list-group list-group-horizontal d-flex justify-content-between col-12 mb-3">
+        <li class="list-group-item flex-fill text-center">An item</li>
+        <li class="list-group-item flex-fill text-center">A second item</li>
+        <li class="list-group-item flex-fill text-center">A third item</li>
+    </ul>
+
+    <!-- Second Horizontal List Group -->
+    <ul class="list-group list-group-horizontal d-flex justify-content-between col-12">
+        <li class="list-group-item flex-fill text-center">An item</li>
+        <li class="list-group-item flex-fill text-center">A second item</li>
+        <li class="list-group-item flex-fill text-center">A third item</li>
+    </ul>
+
+
+    <h1 class="mt-2">List group Background Color</h1>
+    <ul class="list-group">
+        <li class="list-group-item">A simple default list group item</li>
+
+        <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+        <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+        <li class="list-group-item list-group-item-success">A simple success list group item</li>
+        <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+        <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+        <li class="list-group-item list-group-item-info">A simple info list group item</li>
+        <li class="list-group-item list-group-item-light">A simple light list group item</li>
+        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+    </ul>
+
+
+    <h1 class="mt-2">List group Link Color</h1>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list
+            group item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group
+            item</a>
+    </div>
+
+
+
+    <h1 class="mt-2">Badges Example</h1>
+    <div class="col-md-6">
+        <h3>Badges Examples</h3>
+        <p>
+            Default Badge: <span class="badge bg-primary">Primary</span>
+        </p>
+        <p>
+            Pill Badge: <span class="badge rounded-pill bg-success">Success</span>
+        </p>
+        <p>
+            Badge in Button:
+            <button type="button" class="btn btn-warning">
+                Messages <span class="badge bg-dark">5</span>
+            </button>
+        </p>
+        <p>
+            Badge in List Group:
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Tasks
+                <span class="badge bg-danger rounded-pill">3</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Completed
+                <span class="badge bg-success rounded-pill">10</span>
+            </li>
+        </ul>
+        </p>
+    </div>
+
+
+    <h1 class="mt-2">Badges Example In List Group</h1>
+    <!-- Badges in List Group -->
+    <ul class="list-group">
+        <!--justify-content-between
+        Distributes the space between the child elements. The first child (the <div>) will align to the left, and the last child (the <span>) will align to the right.
+        me-auto:
+        Adds a right margin (margin-end) that automatically pushes the <span> (badge) to the far right. This ensures the <div> stays aligned to the left.-->
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Electronics</div>
+                Content for this item
+            </div>
+            <span class="badge bg-primary rounded-pill">20</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Fashion</div>
+                Content for this item
+            </div>
+            <span class="badge bg-danger rounded-pill">10</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Sports</div>
+                Content for this item
+            </div>
+            <span class="badge bg-success rounded-pill">30</span>
+        </li>
+    </ul>
+
+</div>
+
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
