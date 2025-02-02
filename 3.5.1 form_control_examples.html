@@ -10,9 +10,6 @@
     <style>
 
     </style>
-    <style>
-
-    </style>
 </head>
 <body>
 <div class="container">
@@ -114,9 +111,276 @@
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+
+    <h2 class="mt-5">SELECT OPTIONS</h2>
+    <form>
+        <h2>---------------------- Default Select------------------------</h2>
+        <!-- <select> menus need only a custom class, .form-select to trigger the custom styles.-->
+        <!-- If the <select> element already has a visible <label>, aria-label is usually not needed.-->
+        <div class="mb-3">
+            <label for="selectDefault" class="form-label"></label>
+            <select class="form-select" id="selectDefault">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+
+        <h2>----------------------Size of Select------------------------</h2>
+        <!--give size of select-->
+        <div class="mb-3">
+            <label for="selectDefault" class="form-label">Choose Category</label>
+            <!-- form-select-lg/form-select-sm can control size-->
+            <select class="form-select form-select-lg mb-3">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+
+        <h2>----------------------Multiple select option------------------------</h2>
+        <!--Multiple select option-->
+        <div class="mb-3">
+            <label for="selectOptions" class="form-label">Choose Category</label>
+            <select id="selectOptions" class="form-select  mb-3" multiple>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+            </select>
+        </div>
+
+        <h2>-------Multiple select , size="3" dropdown will show 3 options at a time-----------</h2>
+        <!-- The size attribute specifies the number of visible options in the dropdown. When size="3", the dropdown will show 3 options at a time.-->
+        <div class="mb-3">
+            <label for="selectOptions1" class="form-label">Choose Category</label>
+            <select id="selectOptions1" size="3" class="form-select  mb-3" multiple>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+            </select>
+        </div>
+
+        <h2>---------------------- Disable Input Selection------------------------</h2>
+        <!--  Add the disabled boolean attribute on a select to give it a grayed out appearance and remove pointer events.-->
+        <div class="mb-3">
+            <label for="selectDefault2" class="form-label"></label>
+            <select class="form-select" id="selectDefault2" disabled>
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+
+
+    <h2 class="mt-5">Checkbox & Radio Button </h2>
+    <form>
+        <h2>---------------------- Default Checkbox-----------------------</h2>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Select your choice:</label>
+            </div>
+
+            <!-- Right side checkboxes -->
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Checked checkbox
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                    <label class="form-check-label" for="flexCheckChecked2">
+                        Checked checkbox
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <h2>---------------------- Default Radio Button-----------------------</h2>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Select your choice:</label>
+            </div>
+
+            <!-- Right side radio buttons -->
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioDefault" value="default">
+                    <label class="form-check-label" for="radioDefault">
+                        Default radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioChecked" value="checked">
+                    <label class="form-check-label" for="radioChecked">
+                        Checked radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioChecked2" value="another">
+                    <label class="form-check-label" for="radioChecked2">
+                        Another radio
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <h2>---------------------- Toggle Button-----------------------</h2>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Toggle Button:</label>
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="col-sm-10">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                </div>
+            </div>
+        </div>
+
+        <h2>---------------------- Inline Checkbox ----------------------</h2>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Inline Checkbox:</label>
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">3 </label>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>---------------------- Inline Radio Button -----------------------</h2>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Inline Radio Button:</label>
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">3 </label>
+                </div>
+            </div>
+        </div>
+
+        <h2>---------------------- Range Showing -----------------------</h2>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Range :</label>
+            </div>
+
+            <!--Range showing -->
+            <div class="col-sm-10">
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+
+
+        <h1 class="mt-5">Input Group</h1>
+        <!-- Add a row to wrap the columns -->
+        <div class="row">
+            <!-- Left side label -->
+            <div class="col-sm-2">
+                <label class="form-label">Range :</label>
+            </div>
+
+            <!--Input Group -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">First and last name</span>
+                <input type="text" aria-label="First name" class="form-control">
+                <input type="text" aria-label="Last name" class="form-control">
+            </div>
+        </div>
+
+
+
+        <h2 class="mt-5">Floating Label</h2>
+        <!--  .form-floating to enable floating label -->
+        <h2>---------------------- floating label -----------------------</h2>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+    </form>
 </div>
 
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
