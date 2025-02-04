@@ -1,22 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-
-    </style>
-    <style>
-
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Bootstrap Sandbox | Accordion & Collapse</title>
 </head>
 <body>
 <div class="container">
+<<<<<<< HEAD
     <h1 class="mb-1">Basic Table With table class</h1>
     <!-- Basic Tables -->
     <table class="table"> <!-- Table structure with Bootstrap styling -->
@@ -425,9 +418,131 @@
         </tbody>
     </table>
 
+=======
+    <h1 class="mb-5">Accordion & Collapse</h1>
+    <!-- Main Accordion Container -->
+    <div class="accordion" id="accordionExample">
+
+        <!-- First Accordion Item -->
+        <div class="accordion-item">
+            <!-- Accordion Header (contains the toggle button) -->
+            <h2 class="accordion-header" id="headingOne">
+                <!-- Toggle Button for the first item -->
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <!-- Collapsible Content Area for the first item -->
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <!-- Content inside the collapsible area -->
+                <div class="accordion-body">
+                    Content for the first accordion item.
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Accordion Item -->
+        <div class="accordion-item">
+            <!-- Accordion Header (contains the toggle button) -->
+            <h2 class="accordion-header" id="headingTwo">
+                <!-- Toggle Button for the second item (initially collapsed) -->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                    Accordion Item #2
+                </button>
+            </h2>
+            <!-- Collapsible Content Area for the second item -->
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <!-- Content inside the collapsible area -->
+                <div class="accordion-body">
+                    Content for the second accordion item.
+                </div>
+            </div>
+        </div>
+        <!-- Third Accordion Item -->
+        <div class="accordion-item">
+            <!-- Accordion Header (contains the toggle button) -->
+            <h2 class="accordion-header" id="headingThree">
+                <!-- Toggle Button for the second item (initially collapsed) -->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    Accordion Item #2
+                </button>
+            </h2>
+            <!-- Collapsible Content Area for the second item -->
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <!-- Content inside the collapsible area -->
+                <div class="accordion-body">
+                    Content for the third accordion item.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <h1 class="mb-5">Always-Open Accordion</h1>
+    <!-- Main Accordion Container -->
+    <div class="accordion" id="accordionExampleAlwaysShow">
+
+        <!-- First Accordion Item -->
+        <div class="accordion-item">
+            <!-- Accordion Header (contains the toggle button) -->
+            <h2 class="accordion-header" id="heading_1">
+                <!-- Toggle Button for the first item -->
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_1">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <!-- Collapsible Content Area for the first item -->
+            <div id="collapse_1" class="accordion-collapse collapse show">
+                <!-- Content inside the collapsible area -->
+                <div class="accordion-body">
+                    Content for the first accordion item.
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Accordion Item -->
+        <div class="accordion-item">
+            <!-- Accordion Header (contains the toggle button) -->
+            <h2 class="accordion-header" id="heading_2">
+                <!-- Toggle Button for the second item (initially collapsed) -->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <!-- Collapsible Content Area for the second item -->
+            <div id="collapse_2" class="accordion-collapse collapse">
+                <!-- Content inside the collapsible area -->
+                <div class="accordion-body">
+                    Content for the third accordion item.
+                </div>
+            </div>
+        </div>
+        <!-- Third Accordion Item -->
+        <div class="accordion-item">
+            <!-- Accordion Header (contains the toggle button) -->
+            <h2 class="accordion-header" id="heading_3">
+                <!-- Toggle Button for the second item (initially collapsed) -->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_3">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <!-- Collapsible Content Area for the second item -->
+            <div id="collapse_3" class="accordion-collapse collapse">
+                <!-- Content inside the collapsible area -->
+                <div class="accordion-body">
+                    Content for the third accordion item.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Don't go past here -->
+>>>>>>> 853fd26 (dropdown accordion)
 </div>
+<div style="margin-top: 350px"></div>
 
-
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
