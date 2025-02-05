@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Bootstrap Sandbox | Accordion & Collapse</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1>---------------------Border Spinner (Default)------------------------</h1>
+    <!-- Default border spinner -->
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <h1>---------------------Growing Spinner------------------------</h1>
+    <!-- Growing spinner with secondary color -->
+    <div class="spinner-grow text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <h1>------------------Small Border Spinner (Color Also)---------------------</h1>
+    <!-- Small border spinner with danger color -->
+    <div class="spinner-border spinner-border-sm text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <h1>-------------------Large Growing Spinner (Color Also)---------------------</h1>
+    <!-- Large growing spinner without color -->
+    <div class="spinner-grow spinner-grow-lg" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <!-- Large growing spinner with danger color -->
+    <div class="spinner-grow spinner-grow-lg text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <h1>-------------------Spinner in d-flex ---------------------</h1>
+    <!-- Spinner inside a flex container with border and padding -->
+    <div class="d-flex align-items-center border border-danger rounded px-3 py-3">
+        <strong role="status">Loading...</strong>
+        <!-- Spinner aligned to the right -->
+        <div class="spinner-border ms-auto" aria-hidden="true"></div>
+    </div>
+
+    <h1>-------------------Spinner Size ---------------------</h1>
+    <!-- Custom size border spinner -->
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <!-- Custom size growing spinner -->
+    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

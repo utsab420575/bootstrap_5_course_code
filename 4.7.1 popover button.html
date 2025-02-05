@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!-- Enables Bootstrap's dark mode -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" /> <!-- Link Bootstrap CSS -->
+    <title>Bootstrap Sandbox | Accordion & Collapse</title>
+</head>
+<body>
+<div class="container mt-5"> <!-- Bootstrap container for proper spacing and responsiveness -->
+    <!-- Button with hoverable popover -->
+    <button type="button" class="btn btn-lg btn-danger" id="hoverPopover"
+            data-bs-toggle="popover" data-bs-trigger="hover"
+            data-bs-title="Popover title"
+            data-bs-content="And here's some amazing content. It's very engaging. Right?"
+            onclick="toggleMessage()">
+        Hover to show popover, Click to Toggle Message
+    </button>
+    <!--
+        btn         -> Applies Bootstrap button styles.
+        btn-lg      -> Increases button size (large).
+        btn-danger  -> Gives the button a red (danger) color.
+    -->
+
+    <!-- Div to show/hide message -->
+    <div id="messageDiv" class="mt-3 text-white fw-bold" style="display: none;"></div>
+    <!--
+        mt-3       -> Adds margin-top spacing (size 3).
+        text-white -> Sets text color to white.
+        fw-bold    -> Makes the text bold.
+    -->
+</div>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script> <!-- Loads Bootstrap JavaScript -->
+<script>
+    // Enable popover with hover trigger
+    document.addEventListener("DOMContentLoaded", function () {
+        var popoverTrigger = document.getElementById('hoverPopover');
+        new bootstrap.Popover(popoverTrigger, {
+            trigger: 'hover' // Enables popover to appear on hover
+        });
+    });
+
+    // Function to toggle message visibility
+    function toggleMessage() {
+        var messageDiv = document.getElementById("messageDiv");
+
+        if (messageDiv.style.display === "none" || messageDiv.innerText === "") {
+            messageDiv.innerText = "Button Clicked! Here's the displayed message.";
+            messageDiv.style.display = "block"; // Show message
+        } else {
+            messageDiv.style.display = "none"; // Hide message
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!-- Sets the theme to dark mode -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Ensures compatibility with IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive viewport settings -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" /> <!-- Links Bootstrap CSS -->
+    <title>Bootstrap Sandbox | Accordion & Collapse</title> <!-- Page title -->
+</head>
+<body>
+<div class="container">
+    <h1>Basic Toast</h1>
+    <!-- Basic toast example -->
+    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <!-- `toast` class initializes the toast component -->
+        <!-- `show` class makes the toast visible by default -->
+        <!-- `role`, `aria-live`, and `aria-atomic` attributes ensure accessibility -->
+        <div class="toast-header">
+            <!-- `toast-header` class styles the header section of the toast -->
+            <img src="public/image/app-store.png" class="rounded me-2" style="width: 20px; height: 20px;" alt="...">
+            <!-- `rounded` class adds rounded corners to the image -->
+            <!-- `me-2` class adds margin to the right of the image -->
+            <strong class="me-auto">Bootstrap</strong>
+            <!-- `me-auto` class pushes the following elements to the right -->
+            <small>11 mins ago</small>
+            <!-- Displays a timestamp -->
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <!-- `btn-close` class styles the close button -->
+            <!-- `data-bs-dismiss="toast"` enables the close functionality -->
+        </div>
+        <div class="toast-body">
+            <!-- `toast-body` class styles the body section of the toast -->
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+
+    <h1>Toast Showing With Button (Position Fixed End 0 Bottom 0)</h1>
+    <!-- Button to trigger the toast -->
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+    <!-- `btn btn-primary` styles the button -->
+
+    <!-- Toast container positioned at the bottom-right corner -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <!-- `toast-container` class groups multiple toasts -->
+        <!-- `position-fixed` positions the container fixed on the screen -->
+        <!-- `bottom-0` and `end-0` place the container at the bottom-right corner -->
+        <!-- `p-3` adds padding around the container -->
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <!-- Toast with an ID for JavaScript interaction -->
+            <div class="toast-header">
+                <img src="public/image/app-store.png" class="rounded me-2" style="width: 20px; height: 20px;" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+
+    <h1>Stack Toast One Above Other</h1>
+    <!-- Stacked toasts example -->
+    <div class="toast-container position-static">
+        <!-- `position-static` ensures the container does not use fixed positioning -->
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <!-- First toast -->
+            <div class="toast-header">
+                <img src="public/image/app-store.png" class="rounded me-2" style="width: 20px; height: 20px;" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-body-secondary">just now</small>
+                <!-- `text-body-secondary` class styles the text with a secondary color -->
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                See? Just like this.
+            </div>
+        </div>
+
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <!-- Second toast -->
+            <div class="toast-header">
+                <img src="public/image/app-store.png" class="rounded me-2" style="width: 20px; height: 20px;" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-body-secondary">2 seconds ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Heads up, toasts will stack automatically
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script> <!-- Links Bootstrap JS -->
+<script>
+    // JavaScript to handle toast display on button click
+    const toastTrigger = document.getElementById('liveToastBtn'); // Gets the button element
+    const toastLiveExample = document.getElementById('liveToast'); // Gets the toast element
+
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample); // Initializes the toast
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show(); // Shows the toast when the button is clicked
+        });
+    }
+</script>
+</body>
+</html>
